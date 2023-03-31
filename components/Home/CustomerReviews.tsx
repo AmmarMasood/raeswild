@@ -94,7 +94,7 @@ function ReviewCard({ name, stars, overview, details }: ReviewCardProps) {
   return (
     <div className={styles["review-card"]}>
       {[...Array(stars)].map((_, i) => (
-        <Image src={star} alt="star" height={16} width={16} />
+        <Image src={star} alt="star" height={16} width={16} key={i} />
       ))}
       <div className={styles["review-card--content"]}>
         <h3>

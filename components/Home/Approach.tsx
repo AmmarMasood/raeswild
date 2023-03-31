@@ -26,7 +26,7 @@ function Approach() {
           <div className={styles["section--about--inner-listbox"]}>
             <ul>
               <li>
-                <h3>"Meals"</h3>
+                <h3>&quot;Meals&quot;</h3>
                 <p>
                   Powders like “Chicken Meal” can contain meat from diseased
                   livestock.

@@ -22,7 +22,7 @@ function Hero() {
             onClick={() => console.log("start today")}
           />
           <Link href={"/about"}>
-            <FaRegPlayCircle /> Watch Our Ad, "Forever"
+            <FaRegPlayCircle /> Watch Our Ad, &quot;Forever&quot;
           </Link>
         </div>
         <div></div>
@@ -31,15 +31,15 @@ function Hero() {
         <div>
           <Image src={TodayCompany} alt="" height={30} width={180} />
           <p>
-            "An online pet food company that makes feeding real food to dogs
-            really easy."
+            &quot;An online pet food company that makes feeding real food to
+            dogs really easy.&quot;
           </p>
         </div>
         <div>
           <Image src={FastCompany} alt="" height={30} width={180} />
           <p>
-            "Researchers concluded that fresh diets do demonstrate a number of
-            pet health benefits."
+            &quot;Researchers concluded that fresh diets do demonstrate a number
+            of pet health benefits.&quot;
           </p>
         </div>
         <div>
@@ -49,13 +49,16 @@ function Hero() {
         <div>
           <Image src={VogueCompany} alt="" height={30} width={180} />
           <p>
-            "It is never deep frozen, and it never sits on a shelf. All you do
-            is open the pack and pour."
+            &quot;It is never deep frozen, and it never sits on a shelf. All you
+            do is open the pack and pour.&quot;
           </p>
         </div>
         <div>
           <Image src={CBSCompany} alt="" height={30} width={180} />
-          <p>“Owners can get healthy dog food shipped right to their door.”</p>
+          <p>
+            &quot;Owners can get healthy dog food shipped right to their
+            door.&quot;
+          </p>
         </div>
       </div>
     </section>
