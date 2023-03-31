@@ -1,0 +1,151 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+.section {
+  &--about {
+    background-color: variable.$secondary-color;
+
+    &--inner {
+      padding: 80px 100px;
+
+      color: variable.$white;
+      display: flex;
+      justify-content: space-around;
+
+      @include lg {
+        padding: 80px 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      &-textbox {
+        width: 400px;
+        & > h1 {
+          font-size: 40px;
+        }
+        & > p {
+          font-size: 21px;
+          margin-top: 26px;
+          line-height: 28px;
+          & > a {
+            color: variable.$secondary-color-light;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &-listbox {
+        & > ul {
+          list-style: none;
+          & > li {
+            margin-bottom: 32px;
+            & > h3 {
+              font-size: 28px;
+              font-weight: 500;
+              text-decoration: line-through;
+              text-decoration-color: variable.$primary-color;
+            }
+            & > p {
+              margin-top: 10px;
+              line-height: 28px;
+              font-size: 18px;
+              width: 400px;
+
+              @include lg {
+                width: fit-content;
+              }
+            }
+          }
+          @include lg {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-top: 50px;
+            grid-gap: 50px;
+          }
+        }
+      }
+
+      @include set-max-width;
+      margin: 0 auto;
+    }
+  }
+
+  &--info {
+    background-color: variable.$beach-color;
+    &--inner {
+      padding: 80px 100px;
+
+      color: variable.$secondary-color;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      @include lg {
+        padding: 80px 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      &-imagebox {
+        position: relative;
+        width: 400px;
+        height: 650px;
+        margin-top: -200px;
+
+        @include lg {
+          width: 260px;
+          height: 350px;
+          margin-top: -150px;
+        }
+      }
+      &-textbox {
+        width: 400px;
+
+        @include lg {
+          width: 100%;
+        }
+
+        & > h1 {
+          font-size: 40px;
+          @include lg {
+            margin-top: 50px;
+          }
+        }
+        & > div {
+          @include lg {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin-top: 50px;
+            grid-gap: 50px;
+          }
+        }
+        & > div > div {
+          margin: 50px 0;
+
+          @include lg {
+            margin: 0;
+          }
+
+          & > h3 {
+            font-size: 28px;
+            font-weight: 600;
+          }
+          & > p {
+            font-size: 18px;
+            line-height: 24px;
+            & > a {
+              color: variable.$primary-color;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      @include set-max-width;
+      margin: 0 auto;
+    }
+  }
+}

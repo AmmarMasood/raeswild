@@ -1,0 +1,96 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+.hero {
+  padding-top: 70px;
+  background-color: variable.$secondary-color;
+}
+.hero-top {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  height: 650px;
+  position: relative;
+
+  @include lg {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    height: 120vh;
+  }
+
+  & > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    & > h1 {
+      color: variable.$white;
+      font-size: 50px;
+      font-weight: 800;
+      margin-bottom: 34px;
+    }
+    & > p {
+      color: variable.$white;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 50px;
+      margin-top: 10px;
+    }
+
+    & > a {
+      text-decoration: none;
+      color: variable.$secondary-color-light;
+      border-radius: 5px;
+      font-size: 18px;
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+
+      @include lg {
+        color: variable.$white;
+        background-color: variable.$primary-color;
+        padding: 10px;
+      }
+      //   margin-top: 100px;
+    }
+  }
+
+  & > div:nth-child(2) {
+    background-image: url("../../../public/imgs/hero-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+
+.hero-bottom {
+  padding: 30px 80px;
+  background-color: variable.$light-gray;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: center;
+  grid-gap: 20px;
+  justify-content: center;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+
+    & > p {
+      margin-top: 20px;
+      color: variable.$gray;
+      font-size: 18px;
+    }
+
+    @include lg {
+      margin: 20px;
+    }
+  }
+}

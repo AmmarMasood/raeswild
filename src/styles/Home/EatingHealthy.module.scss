@@ -1,0 +1,125 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+.eating-healthy-outer {
+  background-color: variable.$white;
+}
+
+.eating-healthy {
+  padding: 80px 100px;
+  text-align: center;
+  color: variable.$secondary-color;
+
+  & > h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+    @include sm {
+      font-size: 38px;
+    }
+  }
+
+  & > p {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 600px;
+    margin: 0 auto;
+
+    @include lg {
+      width: fit-content;
+    }
+
+    @include sm {
+      font-size: 20px;
+      width: fit-content;
+    }
+  }
+  @include sm {
+    padding: 100px 20px;
+  }
+
+  &--inner {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    &--textcontainer {
+      @include lg {
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        // max-width: 600px;
+      }
+
+      & > div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 60px;
+
+        @include lg {
+          flex-direction: column;
+          align-items: center;
+          margin: 20px 60px;
+          //   justify-content: center;
+        }
+
+        @include sm {
+          margin: 20px;
+        }
+        & > img {
+          margin-right: 10px;
+          margin-top: -5px;
+
+          @include lg {
+            margin: 0;
+          }
+        }
+
+        & > div {
+          text-align: left;
+          @include lg {
+            text-align: center;
+          }
+
+          & > h2 {
+          }
+          & > p {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 10px;
+            width: 150px;
+          }
+        }
+        // width: 250px;
+      }
+    }
+    &-imgcontainer {
+      position: relative;
+      width: 450px;
+      height: 450px;
+      overflow: hidden;
+      margin: 0 50px;
+
+      @include lg {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+    }
+
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+
+      &--textcontainer:nth-child(1) {
+        order: 3;
+      }
+    }
+  }
+
+  @include set-max-width;
+  margin: 0 auto;
+}

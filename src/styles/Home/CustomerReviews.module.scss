@@ -1,0 +1,180 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+// customer reviews
+.customer-reviews {
+  background-color: variable.$beach-color;
+  color: variable.$secondary-color;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  & > h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+    @include sm {
+      font-size: 40px;
+    }
+  }
+  & > p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    @include sm {
+      font-size: 20px;
+    }
+  }
+  & > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include sm {
+      flex-wrap: wrap;
+    }
+
+    & > li {
+      margin: 0 20px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 800;
+
+      @include sm {
+        font-size: 14px;
+      }
+    }
+  }
+  &--cards {
+    margin-top: 10px;
+  }
+}
+.instagram-card {
+  width: 320px;
+  background-color: variable.$white;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 450px;
+  margin: 0 15px;
+
+  & > img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &--icons {
+    display: flex;
+    padding: 10px 0 15px 0;
+    font-size: 26px;
+
+    & > svg {
+      margin-right: 8px;
+    }
+    & > svg:nth-child(1) {
+      font-size: 28px;
+      color: #ed4956;
+    }
+  }
+  &--content {
+    padding: 18px;
+    padding-top: 0;
+
+    & > p {
+      font-size: 16.8px;
+      text-overflow: ellipsis;
+      height: 300px;
+      padding-bottom: 10px;
+      line-height: 18px;
+
+      & > b {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.review-card {
+  width: 320px;
+  background-color: variable.$white;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 300px;
+  padding: 18px;
+  margin: 0 15px;
+  & > img {
+    margin: 0 2px;
+  }
+  &--content {
+    & > h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      & > svg {
+        color: #6ba4d5;
+        margin-left: 5px;
+        font-size: 18px;
+      }
+    }
+    & > p {
+      font-size: 16.8px;
+      text-overflow: ellipsis;
+      padding-bottom: 10px;
+      line-height: 18px;
+
+      & > b {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.recom-plan {
+  background-image: url("../../../public/imgs/sam-moghadam-khamseh-SRzVKw8l_tA-unsplash.jpg");
+  height: 1050px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  margin-top: -200px;
+
+  &--inner {
+    background-color: variable.$white;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    & > h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 30px;
+
+      @include sm {
+        font-size: 34px;
+      }
+    }
+    & > p {
+      font-size: 22px;
+      margin-bottom: 30px;
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+  }
+}

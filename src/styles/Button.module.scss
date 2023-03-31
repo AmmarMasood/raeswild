@@ -1,0 +1,27 @@
+@use "variables" as variable;
+
+.button {
+  background-color: variable.$primary-color;
+  color: variable.$white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  width: fit-content;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f5856f;
+  }
+
+  &--disabled {
+    background-color: #969799;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: #969799;
+    }
+  }
+}

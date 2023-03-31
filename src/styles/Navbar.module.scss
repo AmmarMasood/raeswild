@@ -1,0 +1,146 @@
+@use "variables" as variable;
+@import "./_mixins.scss";
+
+.navbar {
+  background-color: variable.$white;
+  width: 100%;
+  padding: 28px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 800;
+  position: fixed;
+  font-size: 15px;
+  z-index: 10000;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  @include lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 120px;
+
+    @include lg {
+      display: none;
+    }
+  }
+  & > ul > li {
+    padding: 0 10px;
+    cursor: pointer;
+    color: variable.$secondary-color;
+    transition: all 0.3s;
+
+    &:hover {
+      color: variable.$primary-color;
+    }
+    &:active {
+      color: variable.$primary-color;
+    }
+  }
+
+  & > .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid variable.$secondary-color;
+    background-color: variable.$primary-color;
+    position: absolute;
+    top: 5px;
+    z-index: 1000;
+
+    @include lg {
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+  & > p {
+    cursor: pointer;
+    color: variable.$secondary-color;
+    justify-self: flex-end;
+    margin-left: auto;
+    transition: all 0.3s;
+
+    &:hover {
+      color: variable.$primary-color;
+    }
+
+    @include lg {
+      margin: 0;
+    }
+  }
+}
+
+.mobile-nav {
+  display: none;
+
+  & > svg {
+    font-size: 32px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: variable.$primary-color;
+    }
+  }
+
+  &--inner {
+    position: absolute;
+    top: -1000000px;
+    background: variable.$white;
+    height: 10000vh;
+    width: 100vw;
+    overflow: hidden;
+    left: 0;
+    transition: all 0.1s;
+    z-index: 100;
+
+    & > ul {
+      padding: 50px;
+      list-style: none;
+
+      & > li {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        color: variable.$secondary-color;
+        transition: all 0.3s;
+        font-size: 22px;
+        border-bottom: 1px solid #d1d0d0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          color: variable.$primary-color;
+        }
+        &:active {
+          color: variable.$primary-color;
+        }
+      }
+
+      @include md {
+        padding: 30px 10px;
+      }
+    }
+    &-open {
+      top: 76px;
+    }
+  }
+
+  @include lg {
+    display: block;
+  }
+}

@@ -1,0 +1,137 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+// @include lg {
+//   grid-template-columns: 1fr;
+//   grid-template-rows: repeat(2, 1fr);
+//   height: 120vh;
+// }
+
+// @include set-max-width;
+// margin: 0 auto;
+
+// plan features
+.outer-container {
+  background-color: variable.$white;
+}
+.container {
+  color: variable.$secondary-color;
+  padding: 80px 100px;
+
+  @include sm {
+    padding: 80px 20px;
+  }
+
+  &--about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 50px;
+    height: fit-content;
+
+    @include lg {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    & > div:nth-child(1) {
+      //   width: 300px;
+      height: fit-content;
+
+      & > h1 {
+        font-size: 40px;
+        font-weight: 800;
+      }
+
+      & > p {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      & > h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid variable.$primary-color;
+        width: fit-content;
+      }
+      & > ul {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        @include sm {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-gap: 20px;
+        }
+
+        & > li {
+          margin-right: 25px;
+          font-weight: 600;
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      height: 400px;
+      width: auto;
+      position: relative;
+      //   border: 1px solid red;
+      //   height: 300px;
+      //   width: 300px;
+    }
+  }
+  &--working {
+    margin-top: 100px;
+    text-align: center;
+
+    @include lg {
+      margin-top: 50px;
+    }
+
+    & > h1 {
+      font-size: 40px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    & > div:nth-of-type(1) {
+      width: 80%;
+      margin: 0 auto;
+      height: 150px;
+      position: relative;
+    }
+    & > div:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      @include lg {
+        flex-direction: column;
+      }
+
+      & > div {
+        margin: 0px 50px;
+
+        @include lg {
+          margin: 30px 50px;
+        }
+
+        & > h2 {
+          font-size: 30px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        & > p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @include set-max-width;
+  margin: 0 auto;
+}
