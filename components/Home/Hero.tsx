@@ -9,6 +9,7 @@ import FastCompany from "../../public/imgs/fast-company-dc4891.webp";
 import GoogleCompany from "../../public/imgs/google-c6642d.webp";
 import VogueCompany from "../../public/imgs/vogue-5dde5d.webp";
 import CBSCompany from "../../public/imgs/cbs-news-logo-6bf9ca.webp";
+import foodbowl from "../../public/imgs/food-bowl.webp";
 
 function Hero() {
   return (
@@ -21,10 +22,12 @@ function Hero() {
             text="Start Today"
             onClick={() => console.log("start today")}
           />
+          <Image src={foodbowl} alt="" className={styles["food-bowl"]} />
           <Link href={"/about"}>
             <FaRegPlayCircle /> Watch Our Ad, &quot;Forever&quot;
           </Link>
         </div>
+
         <div></div>
       </div>
       <div className={styles["hero-bottom"]}>
