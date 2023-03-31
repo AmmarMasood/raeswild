@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/Home/Approach.module.scss";
 import Link from "next/link";
-import img from "../../public/imgs/karsten-winegeart-Z-rSM6yKgxo-unsplash.jpg";
+import img from "../../public/imgs/dog-image.jpg";
 import Image from "next/image";
 
 function Approach() {

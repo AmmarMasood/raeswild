@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
-import img1 from "../../public/imgs/karsten-winegeart-BJaqPaH6AGQ-unsplash.jpg";
-import img2 from "../../public/imgs/karsten-winegeart-Z-rSM6yKgxo-unsplash.jpg";
+import img1 from "../../public/imgs/food-before.jpg";
+import img2 from "../../public/imgs/food-after.jpg";
 import styles from "@/styles/Home/EatingHealthy.module.scss";
 import Button from "../Shared/Button";
 import vegi from "../../public/imgs/vegetable.png";

@@ -3,7 +3,9 @@ import styles from "@/styles/Home/CustomerReviews.module.scss";
 import Image from "next/image";
 import star from "../../public/imgs/star.png";
 import HorizontalScroller from "../Shared/HorizontalScroller";
-import DogImage from "../../public/imgs/karsten-winegeart-BJaqPaH6AGQ-unsplash.jpg";
+import DogImage from "../../public/imgs/user-review-1.jpg";
+import DogImage2 from "../../public/imgs/karsten-winegeart-Z-rSM6yKgxo-unsplash.jpg";
+import DogImage3 from "../../public/imgs/karsten-winegeart-BJaqPaH6AGQ-unsplash.jpg";
 import {
   IoChatbubbleOutline,
   IoPaperPlaneSharp,
@@ -31,7 +33,7 @@ const dummyData = [
     name: "Molly",
     review:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mi",
-    img: DogImage,
+    img: DogImage2,
   },
   {
     name: "John Doe",
@@ -45,7 +47,7 @@ const dummyData = [
     name: "Molly",
     review:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mi",
-    img: DogImage,
+    img: DogImage3,
   },
   {
     name: "John Doe",

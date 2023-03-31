@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/Home/PlanFeature.module.scss";
 import Image from "next/image";
-import heroimg from "../../public/imgs/hero-img.jpg";
+import heroimg from "../../public/imgs/dog-2.jpg";
 import Button from "../Shared/Button";
 import progress from "../../public/imgs/progress-steps-desktop-9515cb.gif";
 
