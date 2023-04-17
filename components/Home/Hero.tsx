@@ -17,20 +17,24 @@ function Hero() {
       <div className={styles["hero-top"]}>
         <div>
           <h1>A healthy life starts with healthy food.</h1>
-          <p>Real food • Made fresh • Delivered</p>
+          <p>
+            Made with organic veggies and boar meat. Tailored for your
+            pup&apos;s diet.
+          </p>
+
           <Button
             text="Start Today"
             onClick={() => console.log("start today")}
           />
-          <Image src={foodbowl} alt="" className={styles["food-bowl"]} />
-          <Link href={"/about"}>
+          {/* <Image src={foodbowl} alt="" className={styles["food-bowl"]} /> */}
+          {/* <Link href={"/about"}>
             <FaRegPlayCircle /> Watch Our Ad, &quot;Forever&quot;
-          </Link>
+          </Link> */}
         </div>
 
         <div></div>
       </div>
-      <div className={styles["hero-bottom"]}>
+      {/* <div className={styles["hero-bottom"]}>
         <div>
           <Image src={TodayCompany} alt="" height={30} width={180} />
           <p>
@@ -63,7 +67,7 @@ function Hero() {
             door.&quot;
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

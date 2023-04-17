@@ -11,22 +11,21 @@ const EatingHealthy = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = (ref?.current as any).getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (
-        scrollPosition < windowHeight &&
-        scrollPosition > -(ref?.current as any).offsetHeight
-      ) {
-        const scrollPercentage =
-          (windowHeight - scrollPosition) /
-          (windowHeight + (ref?.current as any).offsetHeight + 200);
-        setScrollPercentage(scrollPercentage);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // const handleScroll = () => {
+    //   const scrollPosition = (ref?.current as any).getBoundingClientRect().top;
+    //   const windowHeight = window.innerHeight;
+    //   if (
+    //     scrollPosition < windowHeight &&
+    //     scrollPosition > -(ref?.current as any).offsetHeight
+    //   ) {
+    //     const scrollPercentage =
+    //       (windowHeight - scrollPosition) /
+    //       (windowHeight + (ref?.current as any).offsetHeight + 200);
+    //     setScrollPercentage(scrollPercentage);
+    //   }
+    // };
+    // window.addEventListener("scroll", handleScroll);
+    // return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const imageStyle1: any = {
@@ -53,8 +52,8 @@ const EatingHealthy = () => {
   return (
     <section className={styles["eating-healthy-outer"]}>
       <div className={styles["eating-healthy"]}>
-        <h1>You shouldn’t be the only one eating healthy.</h1>
-        <p>
+        <h1>Rae’s Wild – We Make Fresh Dog Food. Delivered To Your Door.</h1>
+        {/* <p>
           Like you, we love our pets and care about their health. That’s why we
           created The Farmer’s Dog — a service that delivers balanced, freshly
           made pet food with simple recipes, guided by science, and driven by
@@ -117,9 +116,9 @@ const EatingHealthy = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <Button text="See your recipes" onClick={() => console.log("")} />
+        <Button text="Sign Up" onClick={() => console.log("")} />
       </div>
     </section>
   );

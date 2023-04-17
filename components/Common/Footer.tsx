@@ -18,17 +18,18 @@ function Footer() {
       <div className={styles["top-container"]}>
         <div>
           <h2>Site Map</h2>
-          <p>Reviews</p>
-          <p>About Us</p>
-          <p>FAQ</p>
+          {/* <p>Reviews</p> */}
           <p>Log In</p>
           <p>Sign Up</p>
-          <p>Digest</p>
-          <p>DIY</p>
+          <p>About Us</p>
+          <p>Why Wild and Fresh?</p>
+          <p>Testimonials</p>
+          <p>FAQ</p>
+          {/* <p>DIY</p>
           <p>Careers</p>
           <p>Affiliates</p>
           <p>Vet Portal</p>
-          <p>Breeds</p>
+          <p>Breeds</p> */}
         </div>
         <div>
           <h2>Contact</h2>
@@ -72,7 +73,7 @@ function Footer() {
         Our food is made while playing doo-wop tunes, all with ❤ in the US
       </p>
       <div className={styles["bottom-container"]}>
-        <p>© 2023 Placeholder, Inc.Long | Live Dogs™</p>
+        <p>© 2023 Raeswild™, Inc</p>
         <ul>
           <li>Privacy</li>
           <li>Terms</li>

@@ -12,10 +12,10 @@
 
 // plan features
 .outer-container {
-  background-color: variable.$white;
+  background-color: variable.$secondary-color;
 }
 .container {
-  color: variable.$secondary-color;
+  color: variable.$white;
   padding: 80px 100px;
 
   @include sm {
@@ -29,10 +29,15 @@
     justify-content: center;
     grid-gap: 50px;
     height: fit-content;
+    margin-top: 50px;
 
     @include lg {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
+    }
+    @include md {
+      grid-template-rows: 1fr;
+      grid-gap: 0;
     }
 
     & > div:nth-child(1) {
@@ -58,23 +63,103 @@
       & > ul {
         margin-top: 20px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         list-style: none;
+        flex-direction: column;
 
-        @include sm {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-          grid-gap: 20px;
-        }
+        // @include sm {
+        //   display: grid;
+        //   grid-template-columns: 1fr 1fr;
+        //   grid-template-rows: 1fr 1fr;
+        //   grid-gap: 20px;
+        // }
 
         & > li {
-          margin-right: 25px;
+          margin-bottom: 10px;
           font-weight: 600;
+
+          &::before {
+            content: "•";
+            color: variable.$primary-color;
+            padding-right: 5px;
+          }
         }
       }
     }
     & > div:nth-child(2) {
+      height: 400px;
+      width: auto;
+      position: relative;
+      //   border: 1px solid red;
+      //   height: 300px;
+      //   width: 300px;
+    }
+  }
+  &--about-reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 50px;
+    height: fit-content;
+    margin-top: 50px;
+
+    @include lg {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    @include md {
+      grid-template-rows: 1fr;
+      grid-gap: 0;
+    }
+
+    & > div:nth-child(2) {
+      //   width: 300px;
+      height: fit-content;
+
+      & > h1 {
+        font-size: 40px;
+        font-weight: 800;
+      }
+
+      & > p {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      & > h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid variable.$primary-color;
+        width: fit-content;
+      }
+      & > ul {
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        list-style: none;
+        flex-direction: column;
+
+        // @include sm {
+        //   display: grid;
+        //   grid-template-columns: 1fr 1fr;
+        //   grid-template-rows: 1fr 1fr;
+        //   grid-gap: 20px;
+        // }
+
+        & > li {
+          margin-bottom: 10px;
+          font-weight: 600;
+
+          &::before {
+            content: "•";
+            color: variable.$primary-color;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(1) {
       height: 400px;
       width: auto;
       position: relative;

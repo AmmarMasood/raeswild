@@ -1,0 +1,75 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+.outer-container {
+  background-color: variable.$primary-color;
+}
+.container {
+  padding: 80px 100px;
+  & > h1 {
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: variable.$secondary-color;
+
+    @include sm {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
+  @include sm {
+    padding: 80px 20px;
+  }
+}
+.container-inner {
+  color: variable.$secondary-color;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  @include set-max-width;
+
+  @include lg {
+    flex-direction: column;
+  }
+
+  &--box {
+    width: 500px;
+    text-align: center;
+    & > h1 {
+      font-size: 26px;
+      font-weight: 800;
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+
+    & > div {
+      position: relative;
+      margin-top: 50px;
+
+      @include lg {
+        margin-top: 10px;
+      }
+      & > img {
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    }
+  }
+
+  &--or {
+    font-size: 28px;
+    border-bottom: 5px solid variable.$secondary-color;
+
+    @include lg {
+      margin: 60px 0;
+    }
+  }
+}
