@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/Navbar.module.scss";
-import Logo from "../../public/imgs/logo.svg";
+import Logo from "../../public/RAES WILD GREEN LOGO.svg";
 import Image from "next/image";
 import { IoMenu, IoClose } from "react-icons/io5";
 
@@ -23,11 +23,10 @@ function Navbar({ isLoggedIn }: NavbarProps) {
           }`}
         >
           <ul>
-            <li>Reviews</li>
             <li>About Us</li>
-            <li>Why Fresh?</li>
+            <li>Why Wild and Fresh?</li>
+            <li>Testimonials</li>
             <li>FAQ</li>
-            <li>For Veterinarians</li>
           </ul>
         </div>
       </div>
@@ -39,11 +38,10 @@ function Navbar({ isLoggedIn }: NavbarProps) {
         className={styles["logo"]}
       />
       <ul>
-        <li>Reviews</li>
         <li>About Us</li>
-        <li>Why Fresh?</li>
+        <li>Why Wild and Fresh?</li>
+        <li>Testimonials</li>
         <li>FAQ</li>
-        <li>For Veterinarians</li>
       </ul>
       <p>Log In</p>
     </nav>

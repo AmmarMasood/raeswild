@@ -1,52 +1,127 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/Home/PlanFeature.module.scss";
 import Image from "next/image";
-import heroimg from "../../public/imgs/dog-2.jpg";
+import heroimg from "../../public/imgs/3.jpg";
+import heroimg2 from "../../public/imgs/2.jpg";
+import heroimg3 from "../../public/imgs/1.jpg";
 import Button from "../Shared/Button";
 import progress from "../../public/imgs/progress-steps-desktop-9515cb.gif";
 
 function PlanFeature() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1100);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className={styles["outer-container"]}>
       <div className={styles["container"]}>
         <div className={styles["container--about"]}>
           <div>
-            <h1>
-              Better for them. <br />
-              Easier for you.
-            </h1>
-            <p>
+            <h1>Wild Boar Meat</h1>
+            {/* <p>
               Skip the stores, preservatives, and retail markups. Our
               vet-developed plans guide you to the best diet, while
               perfectly-timed refrigerated deliveries make sure you never run
               out.
-            </p>
-            <h2>Plan Features</h2>
+            </p> */}
+            <h2>Benefits</h2>
             <ul>
-              <li>
-                Free & Flexible <br />
-                Deliveries
-              </li>
-              <li>
-                Nationwide <br />
-                Shipping
-              </li>
-              <li>
-                Eco Friendly <br />
-                Packaging
-              </li>
-              <li>
-                24-Hour
-                <br />
-                Customer Service
-              </li>
+              <li>Packed with Vitamins and Minerals</li>
+              <li>Lean Protein with Low Cholesterol</li>
+              <li>Higher Level of Nutrition compared to farm raised pigs</li>
+              <li>No Antibiotics or Hormones</li>
             </ul>
           </div>
           <div>
             <Image alt="dogs" src={heroimg} layout="fill" objectFit="contain" />
           </div>
         </div>
-        <div className={styles["container--working"]}>
+        {isMobile ? (
+          <div className={styles["container--about"]}>
+            <div>
+              <h1>Vet-Nutritionist Approved</h1>
+              {/* <p>
+              Skip the stores, preservatives, and retail markups. Our
+              vet-developed plans guide you to the best diet, while
+              perfectly-timed refrigerated deliveries make sure you never run
+              out.
+            </p> */}
+              {/* <h2>Benefits</h2> */}
+              <ul>
+                <li>Calibrated and Tailored to Your Dog</li>
+                <li>Exceeds AAFCO Standards</li>
+              </ul>
+            </div>
+            <div>
+              <Image
+                alt="dogs"
+                src={heroimg2}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className={styles["container--about-reverse"]}>
+            <div>
+              <Image
+                alt="dogs"
+                src={heroimg2}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <div>
+              <h1>Vet-Nutritionist Approved</h1>
+              {/* <p>
+              Skip the stores, preservatives, and retail markups. Our
+              vet-developed plans guide you to the best diet, while
+              perfectly-timed refrigerated deliveries make sure you never run
+              out.
+            </p> */}
+              {/* <h2>Benefits</h2> */}
+              <ul>
+                <li>Calibrated and Tailored to Your Dog</li>
+                <li>Exceeds AAFCO Standards</li>
+              </ul>
+            </div>
+          </div>
+        )}
+        <div className={styles["container--about"]}>
+          <div>
+            <h1>All Made Fresh</h1>
+            {/* <p>
+              Skip the stores, preservatives, and retail markups. Our
+              vet-developed plans guide you to the best diet, while
+              perfectly-timed refrigerated deliveries make sure you never run
+              out.
+            </p> */}
+            {/* <h2>Benefits</h2> */}
+            <ul>
+              <li>All Organic Ingredients</li>
+              <li>USDA Kitchens</li>
+              <li>Slow Cooked </li>
+            </ul>
+          </div>
+          <div>
+            <Image
+              alt="dogs"
+              src={heroimg3}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </div>
+        {/* <div className={styles["container--working"]}>
           <h1>How your plan works</h1>
           <div>
             <Image src={progress} alt="" layout="fill" objectFit="contain" />
@@ -80,7 +155,7 @@ function PlanFeature() {
             text="Build My Plan"
             onClick={() => console.log("build my plan")}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
