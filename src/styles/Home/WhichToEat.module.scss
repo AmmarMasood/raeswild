@@ -113,7 +113,7 @@
     }
     &-box--reverse {
       flex-direction: row-reverse;
-      margin-top: 10px;
+      // margin-top: 10px;
 
       @include md {
         flex-direction: column;
@@ -140,7 +140,7 @@
   border: 1px solid variable.$primary-color;
   position: absolute;
   top: 60%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
   justify-content: center;
