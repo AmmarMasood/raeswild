@@ -2,7 +2,7 @@
 @import "./_mixins.scss";
 
 .navbar {
-  background-color: variable.$white;
+  background-color: variable.$primary-color;
   width: 100%;
   padding: 28px 30px;
   display: flex;
@@ -42,10 +42,10 @@
     transition: all 0.3s;
 
     &:hover {
-      color: variable.$primary-color;
+      color: variable.$secondary-color;
     }
     &:active {
-      color: variable.$primary-color;
+      color: variable.$secondary-color;
     }
   }
 

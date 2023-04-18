@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/Navbar.module.scss";
-import Logo from "../../public/RAES WILD GREEN LOGO.svg";
+import Logo from "../../public/RAES WILD BLACK LOGO.svg";
 import Image from "next/image";
 import { IoMenu, IoClose } from "react-icons/io5";
 

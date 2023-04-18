@@ -33,7 +33,7 @@ function PlanFeature() {
               perfectly-timed refrigerated deliveries make sure you never run
               out.
             </p> */}
-            <h2>Benefits</h2>
+            {/* <h2>Benefits</h2> */}
             <ul>
               <li>Packed with Vitamins and Minerals</li>
               <li>Lean Protein with Low Cholesterol</li>
