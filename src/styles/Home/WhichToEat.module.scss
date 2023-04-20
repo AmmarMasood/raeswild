@@ -2,17 +2,21 @@
 @import "../_mixins.scss";
 
 .outer-container {
-  background-color: variable.$secondary-color;
   position: relative;
+  background: url(../../../public/imgs/6.jpg);
+  // background-attachment: fixed;
+  background-position: center top -150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include xl {
+    background-size: cover;
+  }
 }
 
 .container {
   position: relative;
   padding: 80px 100px;
-  background: url(../../../public/imgs/6.jpg);
-  background-attachment: fixed;
-  background-position: center top;
-  background-size: cover;
 
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -26,7 +30,7 @@
     position: relative;
     z-index: 2;
     & > h1 {
-      font-size: 48px;
+      font-size: 34px;
       font-weight: 800;
       text-align: center;
       color: variable.$white;
@@ -49,7 +53,7 @@
       }
 
       @include md {
-        font-size: 38px;
+        font-size: 24px;
         padding: 10px;
       }
       @include sm {
@@ -68,7 +72,6 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-
       @include md {
         flex-direction: column;
       }

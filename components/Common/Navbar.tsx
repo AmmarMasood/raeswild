@@ -33,8 +33,8 @@ function Navbar({ isLoggedIn }: NavbarProps) {
       <Image
         src={Logo}
         alt="raeswild"
-        height={24}
-        width={24}
+        height={42}
+        width={42}
         className={styles["logo"]}
       />
       <ul>

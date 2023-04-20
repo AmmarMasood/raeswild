@@ -10,7 +10,7 @@
   align-items: center;
   font-weight: 800;
   position: fixed;
-  font-size: 15px;
+  font-size: 18px;
   z-index: 10000;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
@@ -25,11 +25,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
+    width: 550px;
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-left: 160px;
+    margin-left: 200px;
 
     @include lg {
       display: none;
@@ -38,42 +38,42 @@
   & > ul > li {
     padding: 0 10px;
     cursor: pointer;
-    color: variable.$secondary-color;
+    color: variable.$black;
     transition: all 0.3s;
 
     &:hover {
-      color: variable.$secondary-color;
+      color: variable.$black;
     }
     &:active {
-      color: variable.$secondary-color;
+      color: variable.$black;
     }
   }
 
   & > .logo {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     // border-radius: 50%;
-    // border: 2px solid variable.$secondary-color;
+    // border: 2px solid variable.$black;
     // background-color: variable.$primary-color;
     position: absolute;
-    top: -30px;
+    top: -45px;
     z-index: 1000;
 
     @include lg {
-      top: -25px;
+      top: -42px;
       right: 50%;
       transform: translateX(50%);
     }
   }
   & > p {
     cursor: pointer;
-    color: variable.$secondary-color;
+    color: variable.$black;
     justify-self: flex-end;
     margin-left: auto;
     transition: all 0.3s;
 
     &:hover {
-      color: variable.$primary-color;
+      color: variable.$black;
     }
 
     @include lg {
@@ -114,7 +114,7 @@
         padding-bottom: 30px;
         margin-bottom: 30px;
         cursor: pointer;
-        color: variable.$secondary-color;
+        color: variable.$black;
         transition: all 0.3s;
         font-size: 22px;
         border-bottom: 1px solid #d1d0d0;

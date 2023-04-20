@@ -13,12 +13,12 @@
   }
 
   & > h1 {
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 800;
     margin-bottom: 35px;
 
     @include sm {
-      font-size: 28px;
+      font-size: 24px;
     }
   }
   & > p {

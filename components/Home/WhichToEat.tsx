@@ -42,35 +42,8 @@ function WhichToEat() {
             </div>
           </div>
         </div>
-
-        <div className={styles["layout"]}></div>
       </div>
-      {/* <div className={styles["container"]}>
-        <h1>Which would you rather eat? </h1>
-        <div className={styles["container-inner"]}>
-          <div className={styles["container-inner--box"]}>
-            <h1>
-              Traditional High Heat <br /> Kibble Sprayed <br /> with Flavoring.
-            </h1>
-            <div>
-              <Image alt="dogs" src={heroimg1} />
-            </div>
-          </div>
-          <div className={styles["container-inner--or"]}>
-            <h1>OR</h1>
-          </div>
-          <div className={styles["container-inner--box"]}>
-            <h1>
-              Human Grade Slow Cooked <br /> Wild Boar Meat <br /> with Organic
-              Vegetables.
-            </h1>
-            <div>
-              <Image alt="dogs" src={heroimg} />
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className={styles["layout"]}></div> */}
+      <div className={styles["layout"]}></div>
     </section>
   );
 }
