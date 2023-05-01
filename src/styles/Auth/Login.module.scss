@@ -1,0 +1,99 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+.container {
+  padding-top: 150px;
+  min-height: 80vh;
+}
+
+.inner-container {
+  margin: 0 auto;
+  width: 600px;
+  background-color: variable.$white;
+  //   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  //   padding: 50px;
+  //   border: 1px solid red;
+  @include set-max-width;
+
+  @include sm {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  & > h1 {
+    text-align: center;
+    font-size: 36px;
+    color: variable.$secondary-color;
+  }
+}
+
+.form-container {
+  //   border: 1px solid blue;
+  margin-top: 30px;
+
+  &--group {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    & > label {
+      margin-bottom: 5px;
+      color: variable.$secondary-color;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    & > input {
+      padding: 18px 10px;
+      font-size: 15px;
+      border: 1px solid variable.$gray;
+      border-radius: 5px;
+      &:active {
+        border-color: variable.$primary-color;
+        outline-color: variable.$primary-color;
+      }
+      &:focus {
+        border-color: variable.$primary-color;
+        outline-color: variable.$primary-color;
+      }
+      &:focus-visible {
+        border-color: variable.$primary-color;
+        outline-color: variable.$primary-color;
+      }
+    }
+    & > button {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      background-color: variable.$secondary-color;
+      color: variable.$white;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.1s;
+      border-radius: 5px;
+      width: 300px;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: variable.$black;
+      }
+      &:disabled {
+        background-color: variable.$gray;
+      }
+    }
+  }
+
+  & > p {
+    text-align: center;
+    margin-top: 10px;
+    color: variable.$secondary-color;
+    font-size: 18px;
+
+    & > span {
+      color: variable.$primary-color;
+      font-weight: 600;
+      text-decoration: none;
+      text-decoration: underline;
+    }
+  }
+}

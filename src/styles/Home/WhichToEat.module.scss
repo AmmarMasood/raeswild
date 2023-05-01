@@ -27,6 +27,7 @@
   @include set-max-width;
 
   &--inner {
+    // border: 1px solid red;
     position: relative;
     z-index: 2;
     & > h1 {
@@ -62,16 +63,29 @@
     }
     &--container {
       display: flex;
-      flex-direction: column;
+      // border: 1px solid green;
+
       align-content: space-between;
-      margin-top: 50px;
+      margin-top: 150px;
+
+      @include lg {
+        flex-direction: column;
+      }
+      @include sm {
+        flex-direction: column;
+      }
     }
 
     &-box {
+      // border: 2px solid blue;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+
+      @include lg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       @include md {
         flex-direction: column;
       }
@@ -80,10 +94,11 @@
       & > img {
         border-radius: 5px;
         height: auto;
-        width: 450px;
+        width: 100%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         @include lg {
-          width: 400px;
+          width: 500px;
+          border: 1px solid variable.$primary-color;
         }
         @include md {
           width: 350px;
@@ -100,10 +115,22 @@
         border-bottom-right-radius: 5px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        height: 300px;
+        position: absolute;
+        height: 220px;
         display: flex;
         align-items: center;
+        opacity: 0.9;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
         line-height: 36px;
+
+        @include lg {
+          font-size: 14px;
+          line-height: 23px;
+          height: 160px;
+        }
 
         @include md {
           width: 100%;
@@ -111,6 +138,10 @@
           align-items: center;
           justify-content: center;
           text-align: center;
+        }
+
+        @include sm {
+          width: 350px;
         }
       }
     }
@@ -142,7 +173,7 @@
   display: flex;
   border: 1px solid variable.$primary-color;
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
@@ -152,14 +183,16 @@
   & > h3 {
     color: variable.$white;
     font-size: 36px;
+    padding: 0;
+    margin: 0;
   }
 
   @include md {
     left: 50%;
-    top: 58%;
+    top: 65%;
   }
   @include sm {
     left: 50%;
-    top: 56%;
+    top: 66%;
   }
 }

@@ -49,7 +49,7 @@
     }
   }
 
-  & > .logo {
+  & > a > .logo {
     width: 150px;
     height: 150px;
     // border-radius: 50%;
@@ -69,8 +69,11 @@
     cursor: pointer;
     color: variable.$black;
     justify-self: flex-end;
-    margin-left: auto;
+
     transition: all 0.3s;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
 
     &:hover {
       color: variable.$black;

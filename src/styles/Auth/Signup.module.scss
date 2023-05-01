@@ -1,0 +1,23 @@
+@use "../_variables.scss" as variable;
+@import "../_mixins.scss";
+
+.container {
+  padding-top: 150px;
+  min-height: 80vh;
+}
+
+.inner-container {
+  margin: 0 auto;
+  background-color: variable.$white;
+  width: 100%;
+  padding: 0 100px;
+  @include set-max-width;
+
+  @include sm {
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+.content {
+}

@@ -1,4 +1,5 @@
 import "@/styles/globals.scss";
+import "antd/dist/reset.css";
 import type { AppProps } from "next/app";
 import { Raleway, Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
