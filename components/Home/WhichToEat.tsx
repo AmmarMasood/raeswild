@@ -5,10 +5,16 @@ import heroimg from "../../public/imgs/5.jpg";
 import heroimg1 from "../../public/imgs/4.jpg";
 import heroimg2 from "../../public/imgs/6.jpg";
 import paw from "../../public/imgs/icons8-dog-paw-64.png";
+import dogs from "../../public/imgs/6.jpg";
 
 function WhichToEat() {
   return (
-    <section className={styles["outer-container"]}>
+    <section className={styles[""]}>
+      <Image
+        src={dogs}
+        alt="dogs"
+        className={styles["outer-container--topimage"]}
+      />
       <div className={styles["container"]}>
         <div className={styles["container--inner"]}>
           <h1>
@@ -43,7 +49,7 @@ function WhichToEat() {
           </div>
         </div>
       </div>
-      <div className={styles["layout"]}></div>
+      {/* <div className={styles["layout"]}></div> */}
     </section>
   );
 }
