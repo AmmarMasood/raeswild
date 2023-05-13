@@ -1,0 +1,49 @@
+.container {
+  padding-top: 150px;
+  width: 100%;
+  margin-top: -100px;
+}
+
+.aboutpets {
+  &--topnames {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+
+    & > p {
+      margin: 0 20px;
+      font-size: 22px;
+      font-weight: 800px;
+      text-transform: capitalize;
+    }
+  }
+  &--petinfo {
+    text-align: center;
+    text-transform: capitalize;
+
+    & > div {
+      font-size: 32px;
+    }
+    input {
+      font-size: 32px;
+    }
+  }
+}
+
+.innerbuttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+
+  & > p {
+    margin: 0 10px;
+    border: 1px solid #1de783;
+    font-size: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+}

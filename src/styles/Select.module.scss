@@ -1,0 +1,13 @@
+.container {
+  border: 1px solid #d1d2d4;
+  border-radius: 5px;
+  height: 100%;
+
+  & > div {
+    border: none !important;
+    font-size: 32px !important;
+    height: 70px;
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+  }
+}

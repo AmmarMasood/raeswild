@@ -1,19 +1,18 @@
 import React from "react";
 import styles from "@/styles/Input.module.scss";
+import { Input as AntdInput, InputProps as AntdInputProps } from "antd";
 
-interface InputProps {
+interface InputProps extends AntdInputProps {
   type: string;
   placeholder: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   style?: React.CSSProperties;
-  value: string;
   name: string;
 }
 function Input(props: InputProps) {
   const { type, placeholder, onChange, style, value, name } = props;
 
   return (
-    <input
+    <AntdInput
       className={styles["input"]}
       type={type}
       placeholder={placeholder}

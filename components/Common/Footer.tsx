@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import Button from "../Shared/Button";
 import Input from "../Shared/Input";
+import Link from "next/link";
 
 function Footer() {
   const [email, setEmail] = React.useState("");
@@ -19,11 +20,13 @@ function Footer() {
         <div>
           <h2>Site Map</h2>
           {/* <p>Reviews</p> */}
-          <p>Log In</p>
-          <p>Sign Up</p>
+          <p>
+            <Link href="/login">Log In</Link>
+          </p>
+          <p>
+            <Link href="/signup">Sign Up</Link>
+          </p>
           <p>About Us</p>
-          <p>Why Wild and Fresh?</p>
-          <p>Testimonials</p>
           <p>FAQ</p>
           {/* <p>DIY</p>
           <p>Careers</p>
@@ -33,22 +36,28 @@ function Footer() {
         </div>
         <div>
           <h2>Contact</h2>
+
           <p>
-            {" "}
-            <FaEnvelope /> <span>help@placeholder.com</span>
-          </p>
-          <p>
-            <FaMobileAlt /> <span>(646)-780-7957</span>
+            <FaMobileAlt /> <span>832-722-2500</span>
           </p>
           <p>
             <FaInstagram />
-            <span>Instagram</span>
+            <span>
+              <a href="https://www.instagram.com/raeswild/" target="_blank">
+                Instagram
+              </a>
+            </span>
           </p>
           <p>
-            <FaFacebookSquare /> <span>Facebook</span>
-          </p>
-          <p>
-            <FaNewspaper /> <span>Media Inqueries</span>
+            <FaFacebookSquare />{" "}
+            <span>
+              <a
+                href="https://www.facebook.com/profile.php?id=100092237425382"
+                target="_blank"
+              >
+                Facebook
+              </a>
+            </span>
           </p>
         </div>
         <div>

@@ -5,6 +5,7 @@ import img2 from "../../public/imgs/food-after.jpg";
 import styles from "@/styles/Home/EatingHealthy.module.scss";
 import Button from "../Shared/Button";
 import vegi from "../../public/imgs/vegetable.png";
+import Link from "next/link";
 
 const EatingHealthy = () => {
   const ref = useRef(null);
@@ -118,7 +119,9 @@ const EatingHealthy = () => {
           </div>
         </div> */}
 
-        <Button text="Sign Up" onClick={() => console.log("")} />
+        <Link href={"/signup"}>
+          <Button text="Sign Up" onClick={() => console.log("")} />
+        </Link>
       </div>
     </section>
   );
