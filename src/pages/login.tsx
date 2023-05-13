@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../../components/Common/Layout";
 import styles from "@/styles/Auth/Login.module.scss";
 import Link from "next/link";
+import { Alert } from "antd";
 export default function Login() {
+  useEffect(() => {}, []);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,7 +27,14 @@ export default function Login() {
   return (
     <Layout>
       <div className={styles["container"]}>
-        <div className={styles["inner-container"]}>
+        <div style={{ margin: "0 auto", width: "80vw", marginBottom: "20px" }}>
+          <Alert
+            message="Coming Sooon"
+            type="success"
+            style={{ fontSize: "32px", textAlign: "center", fontWeight: "800" }}
+          />
+        </div>
+        {/* <div className={styles["inner-container"]}>
           <h1>Login</h1>
 
           <div className={styles["form-container"]}>
@@ -82,7 +91,7 @@ export default function Login() {
               </span>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Layout from "../../components/Common/Layout";
 import styles from "@/styles/Auth/Signup.module.scss";
 import Link from "next/link";
-import { message, Steps, theme, ConfigProvider } from "antd";
+import { message, Steps, theme, ConfigProvider, Alert } from "antd";
 import Button from "../../components/Shared/Button";
 import AboutYou, { DogNames, UserInfo } from "../../components/Signup/AboutYou";
 import AboutPets, { DogInfo } from "../../components/Signup/AboutPets";
@@ -123,12 +123,19 @@ export default function Signup() {
   return (
     <Layout>
       <div className={styles["container"]}>
-        <div className={styles["inner-container"]}>
+        <div style={{ margin: "0 auto", width: "80vw", marginBottom: "20px" }}>
+          <Alert
+            message="Coming Sooon"
+            type="success"
+            style={{ fontSize: "32px", textAlign: "center", fontWeight: "800" }}
+          />
+        </div>
+        {/* <div className={styles["inner-container"]}>
           <Steps current={overallStep} items={items} />
           <div className={styles["content"]}>
             {overallSteps[overallStep].content}
           </div>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

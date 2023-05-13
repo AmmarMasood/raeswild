@@ -26,8 +26,8 @@ function Footer() {
           <p>
             <Link href="/signup">Sign Up</Link>
           </p>
-          <p>About Us</p>
-          <p>FAQ</p>
+          {/* <p>About Us</p>
+          <p>FAQ</p> */}
           {/* <p>DIY</p>
           <p>Careers</p>
           <p>Affiliates</p>

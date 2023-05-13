@@ -24,10 +24,10 @@ function Navbar({ isLoggedIn }: NavbarProps) {
           }`}
         >
           <ul>
-            <li>About Us</li>
+            {/* <li>About Us</li>
             <li>Why Wild and Fresh?</li>
             <li>Testimonials</li>
-            <li>FAQ</li>
+            <li>FAQ</li> */}
           </ul>
         </div>
       </div>
@@ -41,10 +41,10 @@ function Navbar({ isLoggedIn }: NavbarProps) {
         />
       </Link>
       <ul>
-        <li>About Us</li>
+        {/* <li>About Us</li>
         <li>Why Wild and Fresh?</li>
         <li>Testimonials</li>
-        <li>FAQ</li>
+        <li>FAQ</li> */}
       </ul>
       <p>
         <Link href={"/login"}>Log In</Link>
