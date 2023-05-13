@@ -418,8 +418,9 @@ function AboutPets(props: IAboutPets) {
                         marginBottom: "20px",
                       }}
                     >
-                      {healthTypes.map((p) => (
+                      {healthTypes.map((p, i) => (
                         <Chip
+                          key={i}
                           style={{ margin: "10px" }}
                           text={p}
                           onClick={(e) =>
@@ -472,8 +473,9 @@ function AboutPets(props: IAboutPets) {
                         marginBottom: "20px",
                       }}
                     >
-                      {prescriptionType.map((p) => (
+                      {prescriptionType.map((p, i) => (
                         <Chip
+                          key={i}
                           style={{ margin: "10px" }}
                           text={p}
                           onClick={(e) =>
@@ -503,6 +505,7 @@ function AboutPets(props: IAboutPets) {
   const getAllDogNames = (currentStep: any) => {
     return dogInfo.map((d, i) => (
       <p
+        key={i}
         style={{
           borderBottom:
             i === currentStep ? "2px solid #1de783" : "2px solid transparent",
